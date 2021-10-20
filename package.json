@@ -9,13 +9,26 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "yarn-deduplicate": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "commit": "git-cz",
+    "format": "prettier --write **/*.{css,html,js,jsx,json,md}"
+  },
+  "lint-staged": {
+    "*.{css,html,js,jsx,json,md}": "prettier --write",
+    "yarn.lock": "yarn-deduplicate yarn.lock"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -36,7 +49,11 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "git-cz": "^4.8.0",
     "husky": "^7.0.2",
-    "lint-staged": "^11.2.3"
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1"
   }
 }
