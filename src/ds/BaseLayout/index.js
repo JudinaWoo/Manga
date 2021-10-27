@@ -8,6 +8,7 @@ import Separator from "../Separator";
 
 export default function BaseLayout({ children }) {
   const { variantPath } = useVariantLocation();
+
   return (
     <>
       <AppBar position="static">
@@ -37,7 +38,7 @@ export default function BaseLayout({ children }) {
 
           <Separator />
 
-          <MenuItem>Login</MenuItem>
+          <MenuItem to="/login">Login</MenuItem>
         </Toolbar>
       </AppBar>
       {children}

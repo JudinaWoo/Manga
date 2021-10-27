@@ -5,7 +5,7 @@ import MenuItem from "./";
 
 export default {
   component: MenuItem,
-  title: "DesignSystem/Molecule/MenuItem",
+  title: "Design System/Molecule/MenuItem",
   decorators: [
     (Story) => (
       <AppBar position="static">

@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@material-ui/styles";
-import { CssBaseline } from "@material-ui";
+import { CssBaseline } from "@material-ui/core";
 import { BrowserRouter } from "react-router-dom";
 
 import theme from "../src/ds/theme";
