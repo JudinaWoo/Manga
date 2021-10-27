@@ -23,8 +23,5 @@ export default function useMovies() {
     fetchData();
   }, [dispatch]);
 
-  //   const fill = () => dispatch(fillMovies(await fetchMovies()));
-  //   const empty = () => dispatch(emptyMovies());
-
   return { movies, hasMovies };
 }
